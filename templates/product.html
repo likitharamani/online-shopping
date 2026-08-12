@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ product.name }} - Online Shopping</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <h1>🛍️ Online Shopping Website</h1>
+
+      <a href="{{ url_for('home') }}">
+        <button>🏠 Home</button>
+      </a>
+
+      <a href="{{ url_for('cart') }}">
+        <button>🛒 View Cart</button>
+      </a>
+    </header>
+
+    <hr />
+
+    <!-- PRODUCT DETAILS -->
+
+    <main>
+      <div class="product-details">
+        <!-- PRODUCT IMAGE -->
+
+        <img
+          src="{{ url_for('static', filename='images/' + product.image) }}"
+          alt="{{ product.name }}"
+          class="product-image"
+        />
+
+        <!-- PRODUCT NAME -->
+
+        <h1>{{ product.name }}</h1>
+
+        <!-- DESCRIPTION -->
+
+        <p>{{ product.description }}</p>
+
+        <!-- PRICE -->
+
+        <h2>₹{{ product.price }}</h2>
+
+        <!-- CATEGORY -->
+
+        <p>
+          <strong>Category:</strong>
+          {{ product.category }}
+        </p>
+
+        <!-- STOCK -->
+
+        <p>
+          <strong>Available Stock:</strong>
+          {{ product.stock }}
+        </p>
+
+        <!-- ADD TO CART -->
+
+        {% if product.stock > 0 %}
+
+        <a href="{{ url_for('add_to_cart', product_id=product.id) }}">
+          <button>🛒 Add to Cart</button>
+        </a>
+
+        {% else %}
+
+        <button disabled>Out of Stock</button>
+
+        {% endif %}
+
+        <br />
+        <br />
+
+        <!-- BACK TO PRODUCTS -->
+
+        <a href="{{ url_for('home') }}">
+          <button>← Back to Products</button>
+        </a>
+      </div>
+    </main>
+
+    <hr />
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>© 2026 Online Shopping Website</p>
+    </footer>
+  </body>
+</html>

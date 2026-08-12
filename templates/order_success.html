@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order Confirmed</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>🛍️ Online Shopping Website</h1>
+
+      <a href="{{ url_for('home') }}">
+        <button>🏠 Home</button>
+      </a>
+    </header>
+
+    <main>
+      <div class="order-success">
+        <h1>🎉 Order Placed Successfully!</h1>
+
+        <p>Thank you for your order, {{ name }}!</p>
+
+        <h2>Order Total: ₹{{ "%.2f"|format(total) }}</h2>
+
+        <p>Your order has been received successfully.</p>
+
+        <br />
+
+        <a href="{{ url_for('home') }}">
+          <button>🛍️ Continue Shopping</button>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Online Shopping Website</p>
+    </footer>
+  </body>
+</html>
