@@ -76,3 +76,28 @@ online_shopping/
 ├── .gitignore
 └── README.md
 ```
+
+├── app.py
+├── database.py
+├── .gitignore
+└── README.md
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Page](screenshots/home.png)
+
+### 🛍️ Product Details
+
+![Product Details](screenshots/product.png)
+
+### 🛒 Shopping Cart
+
+![Shopping Cart](screenshots/cart.png)
+
+### 🎉 Order Confirmation
+
+![Order Confirmation](screenshots/order.png)
