@@ -1,10 +1,13 @@
 from flask import Flask, render_template, session, redirect, url_for, request
 from database import get_db_connection
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 app = Flask(__name__)
 
-app.secret_key = "online_shopping_secret_key"
+app.secret_key = os.getenv("SECRET_KEY")
 
 
 # =================================
