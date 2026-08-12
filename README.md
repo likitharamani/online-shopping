@@ -4,6 +4,13 @@ A simple online shopping website built using **Python, Flask, MySQL, HTML, and C
 
 This project was created as a beginner-friendly web development project to practice Flask, database connectivity, user authentication, product management, and shopping cart functionality.
 
+## 📌 Project Status
+
+✅ Completed beginner-level e-commerce project
+
+The application includes product browsing, search, category filtering,
+shopping cart, user authentication, checkout, and order confirmation.
+
 ---
 
 ## 🚀 Features
